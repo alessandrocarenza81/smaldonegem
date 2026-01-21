@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Studio dentistico Dr. Giammarco Smaldone a Bari e Palo del Colle. Specializzato in conservativa, endodonzia, igiene orale, protesi dentarie e chirurgia orale.">
+    <meta name="keywords" content="dentista Bari, odontoiatra, studio dentistico, endodonzia, protesi, igiene orale">
+    <meta name="author" content="Dr. Giammarco Smaldone">
+    <title>Dr. Giammarco Smaldone | Dentista a Bari e Palo del Colle</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #005a87;
+            --accent-color: #f39c12;
+            --text-dark: #1a1a1a;
+            --text-light: #555;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--white);
+        }
+
+        /* HEADER E NAVIGATION */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        /* MENU MOBILE */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--white);
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--white);
+            margin: 4px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.9rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-color);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(243, 156, 18, 0.4);
+        }
+
+        /* SECTION STYLES */
+        section {
+            padding: 4rem 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            text-align: center;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        /* ABOUT SECTION */
+        #about {
+            background-color: var(--bg-light);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .about-content p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .cv-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.7rem 1.8rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .cv-button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        /* SERVICES SECTION */
+        #services {
+            background-color: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            background: var(--white);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .service-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* LOCATIONS SECTION */
+        #locations {
+            background-color: var(--bg-light);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .location-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .location-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .location-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .location-info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .location-info strong {
+            color: var(--primary-color);
+            min-width: 80px;
+        }
+
+        .location-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .location-info a:hover {
+            color: var(--accent-color);
+        }
+
+        /* ARTICLES SECTION */
+        #articles {
+            background-color: var(--white);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .article-card {
+            background: var(--bg-light);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .article-card h3 {
+            color: var(--primary-color);
+            padding: 1.5rem 1.5rem 0 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .article-card p {
+            color: var(--text-light);
+            padding: 0 1.5rem 1.5rem 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        /* CONTACT SECTION */
+        #contact {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+        }
+
+        #contact h2 {
+            color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: var(--white);
+            text-decoration: none;
+            border-bottom: 2px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--accent-color);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form button {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.9rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--white);
+        }
+
+        /* BOOKING MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: var(--shadow-lg);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            color: var(--text-dark);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: var(--accent-color);
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .booking-form label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            padding: 0.8rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+        }
+
+        .booking-form button {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.9rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .booking-form button:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* CHAT WIDGET */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        .chat-bubble {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .chat-menu {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            display: none;
+            width: 200px;
+        }
+
+        .chat-menu.active {
+            display: block;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-option {
+            padding: 1rem;
+            border-bottom: 1px solid var(--bg-light);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+        }
+
+        .chat-option:last-child {
+            border-bottom: none;
+        }
+
+        .chat-option:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        /* IMMAGINI PLACEHOLDER */
+        .hero-image,
+        .about-image,
+        .service-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            height: 400px;
+        }
+
+        /* RESPONSIVE */
+
+        .social-links a:hover {
+            color: var(--white);
+        }
+
+        /* BOOKING MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: var(--shadow-lg);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            color: var(--text-dark);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover,
+        .close-modal:focus {
+            color: var(--accent-color);
+        }
+
+        .booking-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .booking-form label {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .booking-form input,
+        .booking-form select {
+            padding: 0.8rem;
+            border: 2px solid var(--primary-color);
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .booking-form input:focus,
+        .booking-form select:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.1);
+        }
+
+        .booking-form button {
+            background-color: var(--accent-color);
+            color: var(--text-dark);
+            padding: 0.9rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .booking-form button:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* CHAT WIDGET */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 999;
+        }
+
+        .chat-bubble {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            color: var(--white);
+            font-size: 1.8rem;
+        }
+
+        .chat-bubble:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .chat-menu {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            display: none;
+            width: 200px;
+        }
+
+        .chat-menu.active {
+            display: block;
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .chat-option {
+            padding: 1rem;
+            border-bottom: 1px solid var(--bg-light);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            color: var(--text-dark);
+            display: block;
+        }
+
+        .chat-option:last-child {
+            border-bottom: none;
+        }
+
+        .chat-option:hover {
+            background-color: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        /* IMMAGINI PLACEHOLDER */
+        .hero-image,
+        .about-image,
+        .service-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-image {
+            height: 400px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+
+            nav {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: var(--secondary-color);
+                flex-direction: column;
+                gap: 0;
+                padding: 1rem 0;
+                display: none;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            nav a {
+                padding: 0.8rem 1.5rem;
+                text-align: left;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 1.5rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .locations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 3rem 0;
+            }
+
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+
+            section {
+                padding: 2rem 0;
+            }
+
+            .service-card,
+            .location-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#home" class="logo">Dr. Smaldone<span>.it</span></a>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">Chi Sono</a>
+                    <a href="#services">Prestazioni</a>
+                    <a href="#locations">Studi</a>
+                    <a href="#articles">Articoli</a>
+                    <a href="#contact">Contatti</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Benvenuto nello Studio Dentistico del Dr. Giammarco Smaldone</h1>
+            <p class="subtitle">Eccellenza odontoiatrica a Bari e Palo del Colle</p>
+            <a href="#contact" class="cta-button" onclick="openBookingModal(); return false;">Prenota una Visita</a>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <h2>Chi è il Dr. Giammarco Smaldone</h2>
+            <p class="section-subtitle">Esperienza e Professionalità al Servizio della tua Salute</p>
+            
+            <div class="about-content">
+                <div>
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1768998096/search_images/0c647dd49926dc72b1347458820dd3b4ba8c8b45.jpg" alt="Dr. Giammarco Smaldone - Odontoiatra Professionista" style="width: 100%; height: 400px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15); margin-bottom: 1.5rem;">
+                    <h3>La Mia Formazione</h3>
+                    <p>Laureato in Odontoiatria e Protesi Dentaria presso la Facoltà di Medicina e Chirurgia, ho dedicato la mia carriera alla formazione continua e all'aggiornamento professionale.</p>
+                    <p>Partecipo attivamente a seminari e congressi nazionali ed internazionali per garantire sempre i migliori standard di cura ai miei pazienti.</p>
+                    <button class="cv-button" onclick="scrollToElement('curriculum')">Scarica CV Completo</button>
+                </div>
+                <div>
+                    <h3>Filosofia Professionale</h3>
+                    <p>Credo fermamente che la salute orale sia fondamentale per il benessere generale della persona. Per questo motivo, il mio approccio combina:</p>
+                    <p><strong>✓ Competenza Clinica</strong> - Utilizzo delle migliori tecniche odontoiatriche moderne<br>
+                    <strong>✓ Empatia</strong> - Ascolto e comprensione delle esigenze del paziente<br>
+                    <strong>✓ Trasparenza</strong> - Comunicazione chiara sui trattamenti proposti<br>
+                    <strong>✓ Aggiornamento Continuo</strong> - Formazione permanente sui nuovi protocolli</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <div class="container">
+            <h2>Le Mie Prestazioni</h2>
+            <p class="section-subtitle">Ampia gamma di servizi odontoiatrici specializzati</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1768998096/search_images/391fe10f41d9ce1431112fb2c3e6aded6fc3497d.jpg" alt="Servizio Conservativa Dentale" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+                    <div class="service-icon">🦷</div>
+                    <h3>Conservativa</h3>
+                    <p>Restauro e conservazione dei denti naturali con le migliori tecniche di otturazione</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">⚙️</div>
+                    <h3>Endodonzia</h3>
+                    <p>Cura dei canali radicolari per salvare denti compromessi dalla carie profonda</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <h3>Igiene Orale</h3>
+                    <p>Pulizia professionale e prevenzione della placca batterica e del tartaro</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">😁</div>
+                    <h3>Protesi Dentarie</h3>
+                    <p>Protesi fisse e mobili personalizzate per ripristinare estetica e funzionalità</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🔪</div>
+                    <h3>Chirurgia Orale</h3>
+                    <p>Interventi chirurgici mini-invasivi e estrazione dentale con massima precisione</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Medicina Preventiva</h3>
+                    <p>Programmi personalizzati di prevenzione e mantenimento della salute orale</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATIONS SECTION -->
+    <section id="locations">
+        <div class="container">
+            <h2>I Nostri Studi</h2>
+            <p class="section-subtitle">Due sedi convenienti per servire meglio la comunità</p>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1768998096/search_images/1fb432758eae989698629ddfcb9aab2b5a92700c.jpg" alt="Studio Dentistico Bari - Ambiente Professionale" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+                    <h3>📍 Studio di Bari</h3>
+                    <div class="location-info">
+                        <strong>Indirizzo:</strong>
+                        <div>via F. Campione – 70124 – Bari</div>
+                    </div>
+                    <div class="location-info">
+                        <strong>Telefono:</strong>
+                        <div><a href="tel:+390805520708">080 552 07 08</a></div>
+                    </div>
+                    <div class="location-info">
+                        <strong>Orari:</strong>
+                        <div>Lunedì - Venerdì: 9:00 - 13:00 / 15:00 - 20:00</div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <img src="https://pplx-res.cloudinary.com/image/upload/v1768998097/search_images/edc66dd0db0b07c8b1874e5847084b6628c5fbdc.jpg" alt="Studio Dentistico Palo del Colle - Clinica Moderna" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+                    <h3>📍 Studio di Palo del Colle</h3>
+                    <div class="location-info">
+                        <strong>Indirizzo:</strong>
+                        <div>Via XX Settembre 20/A – 70027 – Palo del Colle (BA)</div>
+                    </div>
+                    <div class="location-info">
+                        <strong>Telefono:</strong>
+                        <div><a href="tel:+390809911463">080 991 14 63</a></div>
+                    </div>
+                    <div class="location-info">
+                        <strong>Orari:</strong>
+                        <div>Martedì - Sabato: 9:00 - 13:00 / 15:00 - 19:00</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTICLES SECTION -->
+    <section id="articles">
+        <div class="container">
+            <h2>Articoli e Approfondimenti</h2>
+            <p class="section-subtitle">Leggi gli ultimi articoli di odontoiatria e igiene orale</p>
+            
+            <div class="articles-grid">
+                <div class="article-card">
+                    <h3>La carie può trasmettersi con un bacio?</h3>
+                    <p>Scopri se la carie è effettivamente contagiosa e come proteggerti attraverso una corretta igiene orale e una sana alimentazione.</p>
+                </div>
+                
+                <div class="article-card">
+                    <h3>L'Alitosi: Cause e Soluzioni</h3>
+                    <p>Una guida completa su come riconoscere l'alitosi e quali sono i rimedi più efficaci per combatterla e ritrovare sicurezza.</p>
+                </div>
+                
+                <div class="article-card">
+                    <h3>Odontofobia: La Paura del Dentista</h3>
+                    <p>Come superare la paura del dentista con tecniche di rilassamento e con un approccio professionale e comprensivo.</p>
+                </div>
+                
+                <div class="article-card">
+                    <h3>Traumi Dentali: Cosa Fare</h3>
+                    <p>Consigli pratici su come gestire un trauma dentale e quali sono gli interventi tempestivi da effettuare.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contatti</h2>
+            <p class="section-subtitle">Compila il modulo per prenotare una visita o per ricevere informazioni</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informazioni di Contatto</h3>
+                    <p><strong>Mobile:</strong> <a href="tel:+393803118787">380 311 87 87</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:info@giammarcosmaldone.it">info@giammarcosmaldone.it</a></p>
+                    <p><strong>Skype:</strong> giammarco.smaldone</p>
+                    <p><strong>Web:</strong> www.giammarcosmaldone.it</p>
+                    
+                    <h3 style="margin-top: 2rem;">Orari Studio Bari</h3>
+                    <p>Lunedì - Venerdì<br>9:00 - 13:00 | 15:00 - 20:00<br>Sabato su prenotazione</p>
+                    
+                    <h3 style="margin-top: 1.5rem;">Orari Studio Palo del Colle</h3>
+                    <p>Martedì - Sabato<br>9:00 - 13:00 | 15:00 - 19:00</p>
+                </div>
+                
+                <form class="contact-form" onsubmit="handleFormSubmit(event)">
+                    <input type="text" placeholder="Il tuo nome" required>
+                    <input type="email" placeholder="La tua email" required>
+                    <input type="tel" placeholder="Il tuo telefono" required>
+                    <input type="text" placeholder="Oggetto della richiesta">
+                    <textarea placeholder="Il tuo messaggio" required></textarea>
+                    <button type="submit">Invia Richiesta</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING MODAL -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeBookingModal()">&times;</span>
+            <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Prenota una Visita</h2>
+            
+            <form class="booking-form" onsubmit="handleBookingSubmit(event)">
+                <div>
+                    <label for="booking-name">Nome e Cognome *</label>
+                    <input type="text" id="booking-name" required>
+                </div>
+                
+                <div>
+                    <label for="booking-email">Email *</label>
+                    <input type="email" id="booking-email" required>
+                </div>
+                
+                <div>
+                    <label for="booking-phone">Telefono *</label>
+                    <input type="tel" id="booking-phone" required>
+                </div>
+                
+                <div>
+                    <label for="booking-service">Tipo di Prestazione *</label>
+                    <select id="booking-service" required>
+                        <option value="">-- Seleziona Prestazione --</option>
+                        <option value="conservativa">Conservativa</option>
+                        <option value="endodonzia">Endodonzia</option>
+                        <option value="igiene">Igiene Orale</option>
+                        <option value="protesi">Protesi Dentarie</option>
+                        <option value="chirurgia">Chirurgia Orale</option>
+                        <option value="prevenzione">Medicina Preventiva</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="booking-date">Data Desiderata *</label>
+                    <input type="date" id="booking-date" required>
+                </div>
+                
+                <div>
+                    <label for="booking-time">Ora Desiderata *</label>
+                    <select id="booking-time" required>
+                        <option value="">-- Seleziona Ora --</option>
+                        <option value="09:00">09:00</option>
+                        <option value="10:00">10:00</option>
+                        <option value="11:00">11:00</option>
+                        <option value="12:00">12:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="17:00">17:00</option>
+                        <option value="18:00">18:00</option>
+                        <option value="19:00">19:00</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="booking-location">Studio *</label>
+                    <select id="booking-location" required>
+                        <option value="">-- Seleziona Studio --</option>
+                        <option value="bari">Bari - Via F. Campione</option>
+                        <option value="palo">Palo del Colle - Via XX Settembre</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="booking-notes">Note Aggiuntive</label>
+                    <input type="text" id="booking-notes" placeholder="Scrivi eventuali note">
+                </div>
+                
+                <button type="submit">Confirma Prenotazione</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CHAT WIDGET -->
+    <div class="chat-widget">
+        <div class="chat-menu" id="chatMenu">
+            <a href="https://wa.me/393803118787?text=Ciao%20Dr.%20Smaldone,%20vorrei%20ricevere%20informazioni%20sulle%20vostre%20prestazioni" target="_blank" class="chat-option">
+                💬 WhatsApp
+            </a>
+            <a href="https://t.me/giammarcosmaldone" target="_blank" class="chat-option">
+                📱 Telegram
+            </a>
+            <a href="mailto:info@giammarcosmaldone.it" class="chat-option">
+                ✉️ Email
+            </a>
+            <a href="tel:+393803118787" class="chat-option">
+                ☎️ Chiama
+            </a>
+        </div>
+        <div class="chat-bubble" onclick="toggleChatMenu()">💬</div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Dr. Giammarco Smaldone - Studio Dentistico. Tutti i diritti riservati.</p>
+            <p>Privacy Policy | Cookie Policy | Powered by <a href="https://iapromptconsulting.it/" target="_blank" style="color: var(--accent-color); text-decoration: none;">IAPromptConsulting</a></p>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="LinkedIn">in</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+
+        hamburger.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+
+        // Chiudi menu quando clicchi su un link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Funzione per lo scroll fluido
+        function scrollToElement(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // BOOKING MODAL FUNCTIONS
+        function openBookingModal() {
+            document.getElementById('bookingModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function handleBookingSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('booking-name').value;
+            const email = document.getElementById('booking-email').value;
+            const phone = document.getElementById('booking-phone').value;
+            const service = document.getElementById('booking-service').value;
+            const date = document.getElementById('booking-date').value;
+            const time = document.getElementById('booking-time').value;
+            const location = document.getElementById('booking-location').value;
+            
+            const message = `Prenotazione richiesta da ${name}:\nEmail: ${email}\nTelefono: ${phone}\nServizio: ${service}\nData: ${date}\nOra: ${time}\nStudio: ${location}`;
+            
+            alert('Grazie per la prenotazione! Ti contatteremo a breve per confermare.');
+            closeBookingModal();
+            event.target.reset();
+        }
+
+        // CHAT WIDGET FUNCTIONS
+        function toggleChatMenu() {
+            const chatMenu = document.getElementById('chatMenu');
+            chatMenu.classList.toggle('active');
+        }
+
+        // Chiudi chat menu quando clicchi fuori
+        document.addEventListener('click', function(event) {
+            const chatWidget = document.querySelector('.chat-widget');
+            if (!chatWidget.contains(event.target)) {
+                document.getElementById('chatMenu').classList.remove('active');
+            }
+        });
+
+        // Gestione form contatti
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert('Grazie per la tua richiesta! Ti contatterò presto al numero o email fornito.');
+            event.target.reset();
+        }
+
+        // Chiudi menu quando ridimensioni la finestra
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('active');
+            }
+        });
+
+        // Chiudi modal quando clicchi fuori
+        window.onclick = function(event) {
+            const modal = document.getElementById('bookingModal');
+            if (event.target === modal) {
+                closeBookingModal();
+            }
+        }
+    </script>
+</body>
+</html>
